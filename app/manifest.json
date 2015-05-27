@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "jira-fix",
+    "description": "Fix Jira styling issues",
+    "version": "0.0.13",
+    "icons": {
+        "16": "img/icon_16.png",
+        "32": "img/icon_32.png",
+        "48": "img/icon_48.png",
+        "64": "img/icon_64.png",
+        "128": "img/icon_128.png"
+    },
+    "permissions": [
+        "http://support.systematic.com/*",
+        "https://support.systematic.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://support.systematic.com/secure/RapidBoard.jspa*"
+            ],
+            "css": [
+                "css/main.min.css"
+            ]
+        }
+    ]
+}
