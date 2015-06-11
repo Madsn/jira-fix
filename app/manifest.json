@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "jira-fix",
     "description": "Fix Jira styling issues",
-    "version": "0.0.13",
+    "version": "0.0.38",
     "icons": {
         "16": "img/icon_16.png",
         "32": "img/icon_32.png",
@@ -12,15 +12,27 @@
     },
     "permissions": [
         "http://support.systematic.com/*",
-        "https://support.systematic.com/*"
+        "https://support.systematic.com/*",
+        "http://localhost:9002/*",
+        "activeTab"
     ],
+    "background": {
+        "scripts": [
+            "js/background.min.js"
+        ],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_icon": "img/icon_19.png",
+        "default_title": "fill mandatory fields"
+    },
     "content_scripts": [
         {
             "matches": [
-                "https://support.systematic.com/secure/RapidBoard.jspa*"
+                "https://support.systematic.com/secure/*"
             ],
-            "css": [
-                "css/main.min.css"
+            "js": [
+                "js/jira.min.js"
             ]
         }
     ]

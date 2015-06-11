@@ -1,6 +1,6 @@
 {
     "name": "jira-fix",
-    "version": "0.0.13",
+    "version": "0.0.38",
     "private": true,
     "dependencies": {},
     "devDependencies": {
